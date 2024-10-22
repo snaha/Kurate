@@ -2,8 +2,6 @@ import type { DraftPersona, Persona } from '$lib/stores/persona'
 import type { Signer } from 'ethers'
 import type { DraftChat } from '$lib/stores/chat'
 import { Firebase } from './firebase'
-import { ADAPTER } from '$lib/constants'
-import { getFromLocalStorage } from '$lib/utils'
 
 export interface Adapter {
 	// This is run when the app is mounted and should start app wide subscriptions
@@ -32,13 +30,6 @@ export interface Adapter {
 	sendChatMessage(chatId: string, text: string): Promise<void>
 	subscribeToChat?: (chatId: string) => Promise<() => void>
 }
-
-export const adapters = ['firebase'] as const
-export type AdapterName = (typeof adapters)[number]
-export const adapterName: AdapterName = getFromLocalStorage<AdapterName>(
-	'adapter',
-	ADAPTER as AdapterName,
-)
 
 const adapter: Adapter = new Firebase()
 export default adapter
