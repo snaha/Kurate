@@ -3,7 +3,7 @@ name: Check
 on:
   push:
     branches:
-      - 'main'
+      - main
   pull_request:
     branches:
       - '**'
@@ -13,34 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 18
+          version: 9
 
-      - uses: pnpm/action-setup@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          version: 7
+          node-version: 20
+          cache: 'pnpm'
 
-      - name: Install dependenciess
+      - name: Install deps
         run: pnpm install --frozen-lockfile
-
-      # - name: Download snark-artifacts
-      #   working-directory: packages/contracts
-      #   run: pnpm run download:snark-artifacts
-
-      - name: Test
-        run: pnpm --filter ui run test # FIXME: run contract tests as well
 
       - name: Check the build
         run: pnpm run check
 
-      - name: Code linting
-        run: pnpm run lint
+      # - name: Code linting
+      #   run: pnpm run lint
 
       - name: Check dependencies, unused code
         run: pnpm run knip

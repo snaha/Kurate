@@ -28,22 +28,25 @@
 
 <style lang="scss">
 	.root {
-		padding-left: var(--spacing-12);
-		padding-right: var(--spacing-12);
-		height: 44px;
-		border-width: 1px;
-		border-style: solid;
-		box-sizing: border-box;
-		border-radius: 50px;
-		cursor: pointer;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		justify-content: center;
-		font-family: var(--font-body);
+		align-items: center;
+		transition:
+			border-color 0.2s,
+			background-color 0.2s,
+			color 0.2s;
+		cursor: pointer;
+		box-sizing: border-box;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 50px;
+		padding-right: var(--spacing-12);
+		padding-left: var(--spacing-12);
+		height: 44px;
 		font-weight: 600;
 		font-size: var(--font-size-normal);
-		transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+		font-family: var(--font-body);
 		white-space: nowrap;
 
 		&:disabled {
@@ -51,10 +54,10 @@
 		}
 	}
 	.icon-only {
-		width: 44px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 44px;
 
 		.wrapper {
 			margin-right: 0px;
@@ -66,33 +69,35 @@
 		}
 	}
 	.wrapper {
-		width: 20px;
-		height: 20px;
-		margin-right: var(--spacing-6);
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-right: var(--spacing-6);
+		width: 20px;
+		height: 20px;
 	}
 	.primary {
-		color: var(--color-body-bg);
 		border-color: var(--color-body-text);
 		background-color: var(--color-body-text);
+		color: var(--color-body-bg);
 
 		& :global(svg) {
 			fill: var(--color-body-bg);
 		}
 
 		&:disabled {
-			background-color: var(--grey-200);
 			border-color: var(--grey-200);
+			background-color: var(--grey-200);
 			color: var(--color-body-bg);
 		}
 
 		&:active:not(:disabled),
 		&:hover:not(:disabled) {
+			transition:
+				border-color 0.2s,
+				background-color 0.2s;
 			border-color: var(--color-black);
 			background-color: var(--color-black);
-			transition: border-color 0.2s, background-color 0.2s;
 		}
 
 		// @media (prefers-color-scheme: dark) {
@@ -112,8 +117,8 @@
 		// }
 	}
 	.secondary {
-		background-color: var(--color-body-bg);
 		border-color: var(--grey-200);
+		background-color: var(--color-body-bg);
 		color: var(--color-body-text);
 
 		& :global(svg) {
@@ -130,8 +135,10 @@
 
 		&:active:not(:disabled),
 		&:hover:not(:disabled) {
+			transition:
+				border-color 0.2s,
+				background-color 0.2s;
 			background-color: var(--grey-150);
-			transition: border-color 0.2s, background-color 0.2s;
 		}
 
 		// @media (prefers-color-scheme: dark) {
@@ -159,9 +166,9 @@
 		// }
 	}
 	.overlay {
-		background-color: rgba(var(--color-black-rgb), 0.5);
-		border-color: transparent;
 		backdrop-filter: blur(var(--blur));
+		border-color: transparent;
+		background-color: rgba(var(--color-black-rgb), 0.5);
 		color: var(--color-body-bg);
 
 		& :global(svg) {
@@ -177,13 +184,13 @@
 
 		&:active:not(:disabled),
 		&:hover:not(:disabled) {
-			background-color: var(--color-black);
 			transition: background-color 0.2s;
+			background-color: var(--color-black);
 		}
 	}
 	.accent {
-		background-color: var(--grey-200);
 		border-color: var(--grey-200);
+		background-color: var(--grey-200);
 		color: var(--color-body-text);
 
 		& :global(svg) {

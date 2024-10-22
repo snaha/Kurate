@@ -61,26 +61,26 @@
 		gap: var(--spacing-6);
 
 		.post-text {
-			font-family: var(--font-serif);
-			font-size: var(--font-size-normal);
-			font-weight: var(--font-weight-sb);
 			color: var(--grey-300);
 			font-style: italic;
+			font-weight: var(--font-weight-sb);
+			font-size: var(--font-size-normal);
+			font-family: var(--font-serif);
 		}
 
 		.chat-message {
-			font-family: var(--font-serif);
 			font-size: var(--font-size-lg);
+			font-family: var(--font-serif);
 		}
 
 		.timestamp {
-			font-size: var(--font-size-sm);
 			display: flex;
 			flex-direction: row;
-			align-items: center;
-			justify-content: flex-start;
 			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-items: center;
 			gap: var(--spacing-12);
+			font-size: var(--font-size-sm);
 		}
 	}
 </style>

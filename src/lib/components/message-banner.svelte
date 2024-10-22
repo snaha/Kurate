@@ -13,29 +13,29 @@
 
 <style lang="scss">
 	.info-banner {
-		position: sticky;
-		inset: 0 0 auto;
-		z-index: 100;
-		padding: var(--spacing-12);
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		position: sticky;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		gap: var(--spacing-6);
-		font-size: 14px;
+		z-index: 100;
+		inset: 0 0 auto;
+		padding: var(--spacing-12);
 		font-weight: var(--font-weight-sb);
+		font-size: 14px;
 
 		.wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: 20px;
 			height: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 		}
 
 		&.info {
-			color: (--color-body-text);
 			background-color: rgba(var(--grey-200-rgb), 0.95);
+			color: (--color-body-text);
 		}
 
 		&.danger {

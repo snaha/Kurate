@@ -433,13 +433,13 @@
 <style lang="scss">
 	.header {
 		position: fixed;
-		inset: -100% 0 auto;
 		z-index: 50;
 		transition: inset 0.5s;
+		inset: -100% 0 auto;
 
 		&.scrolled {
-			inset: 44px 0 auto;
 			transition: inset 0.3s;
+			inset: 44px 0 auto;
 		}
 	}
 
@@ -457,8 +457,8 @@
 	}
 
 	.icon-success {
-		position: relative;
 		display: inline-block;
+		position: relative;
 		margin-bottom: var(--spacing-12);
 
 		:global(svg) {
@@ -472,14 +472,14 @@
 
 		&::before {
 			position: absolute;
-			content: '';
-			inset: -4px auto auto auto;
-			background-color: var(--color-success);
-			border-radius: 50%;
-			width: 28px;
-			height: 28px;
 			transform: translate(-4px, 0px);
 			z-index: -1;
+			inset: -4px auto auto auto;
+			border-radius: 50%;
+			background-color: var(--color-success);
+			width: 28px;
+			height: 28px;
+			content: '';
 		}
 	}
 </style>

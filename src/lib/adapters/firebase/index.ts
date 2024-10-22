@@ -46,12 +46,12 @@ const IPFS_GATEWAY = 'https://kurate.infura-ipfs.io/ipfs'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: 'AIzaSyDH2EKqPTP3MSJKd1jeHfZsiqs2MxxqaUs',
-	authDomain: 'kurate-demo.firebaseapp.com',
-	projectId: 'kurate-demo',
-	storageBucket: 'kurate-demo.appspot.com',
-	messagingSenderId: '705467445059',
-	appId: '1:705467445059:web:e848928a33d2a27b7b49f6',
+	apiKey: 'AIzaSyBqjyMLRZJWnY9mOYB4m8jXLvqpC77xo58',
+	authDomain: 'kurate-demo-8706f.firebaseapp.com',
+	projectId: 'kurate-demo-8706f',
+	storageBucket: 'kurate-demo-8706f.appspot.com',
+	messagingSenderId: '471680773871',
+	appId: '1:471680773871:web:7139a8f64ddfe2b4bff51a',
 }
 
 // Initialize Firebase

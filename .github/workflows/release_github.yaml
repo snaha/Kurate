@@ -1,0 +1,31 @@
+# On each new commit to main, create/update a PR with release
+# automatically bumps version and creates changelog as per conventional commits
+name: Release Github
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Update the 'latest' branch to this newly released tag
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          git branch -f latest
+          git push origin latest -f

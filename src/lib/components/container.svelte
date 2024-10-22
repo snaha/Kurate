@@ -9,10 +9,10 @@
 
 <style lang="scss">
 	.container {
-		padding: 0 var(--spacing-24);
 		transition: padding 0.2s;
-		max-width: 498px;
 		margin-inline: auto;
+		padding: 0 var(--spacing-24);
+		max-width: 498px;
 
 		@media (min-width: 688px) {
 			padding: 0 var(--spacing-48);

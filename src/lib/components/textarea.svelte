@@ -68,17 +68,17 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: var(--spacing-6);
-		font-size: var(--font-size-sm);
-		color: var(--color-body-text);
-		padding-block: var(--spacing-24);
-		background-color: transparent;
 		transition: background-color 0.2s;
+		background-color: transparent;
+		padding-block: var(--spacing-24);
+		color: var(--color-body-text);
+		font-size: var(--font-size-sm);
 
 		&.highlight {
 			padding-inline: var(--spacing-24);
 			&:focus-within {
-				background-color: var(--grey-150);
 				transition: background-color 0.2s;
+				background-color: var(--grey-150);
 			}
 		}
 
@@ -88,10 +88,10 @@
 			height: fit-content;
 
 			.placeholder-text {
-				font-size: var(--font-size-lg);
-				color: var(--grey-300);
 				width: 100%;
 				height: fit-content;
+				color: var(--grey-300);
+				font-size: var(--font-size-lg);
 
 				&.hide {
 					display: none;
@@ -99,11 +99,11 @@
 			}
 			textarea {
 				position: absolute;
+				transition: background-color 0.2s;
 				inset: 0;
 				border: none;
-				resize: none;
 				background-color: transparent;
-				transition: background-color 0.2s;
+				resize: none;
 				font-size: var(--font-size-lg);
 				font-family: var(--font-serif);
 

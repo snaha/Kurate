@@ -83,8 +83,8 @@
 
 <style lang="scss">
 	.post-content {
-		max-width: 450px;
 		margin-inline: auto;
+		max-width: 450px;
 	}
 
 	/* The magic */
@@ -161,8 +161,8 @@
 	}
 
 	.child {
-		flex-basis: 100%;
 		position: relative;
+		flex-basis: 100%;
 
 		img {
 			max-height: 300px;
@@ -171,15 +171,15 @@
 
 		&:not(:only-child) img {
 			aspect-ratio: 1;
-			object-fit: cover;
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
 		}
 
 		.icon {
 			position: absolute;
-			right: var(--spacing-12);
 			top: var(--spacing-12);
+			right: var(--spacing-12);
 		}
 	}
 </style>

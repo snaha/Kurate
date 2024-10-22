@@ -40,13 +40,5 @@ export const adapterName: AdapterName = getFromLocalStorage<AdapterName>(
 	ADAPTER as AdapterName,
 )
 
-let adapter: Adapter
-switch (adapterName) {
-	case 'firebase':
-		adapter = new Firebase()
-		break
-	default:
-		throw new Error(`Invalid adapter ${ADAPTER}`)
-}
-
+const adapter: Adapter = new Firebase()
 export default adapter

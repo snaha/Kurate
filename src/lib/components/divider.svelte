@@ -7,9 +7,9 @@
 <style lang="scss">
 	hr {
 		border: none;
+		background-color: var(--grey-200);
 		width: 100%;
 		height: 1px;
-		background-color: var(--grey-200);
 
 		&.desktop {
 			@media (max-width: 687.98px) {

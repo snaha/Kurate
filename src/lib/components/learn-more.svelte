@@ -16,10 +16,10 @@
 <style lang="scss">
 	.root {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		flex-direction: row;
 		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
 		gap: 3px;
 	}
 </style>

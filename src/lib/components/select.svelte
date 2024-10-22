@@ -21,24 +21,24 @@
 
 <style lang="scss">
 	.root {
-		padding: var(--spacing-24);
-		box-sizing: border-box;
-		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
 		justify-content: center;
-		font-family: var(--font-body);
+		align-items: flex-start;
+		cursor: pointer;
+		box-sizing: border-box;
+		margin: var(--spacing-24) calc(var(--spacing-24) * -1) var(--spacing-12);
+		padding: var(--spacing-24);
+		color: var(--color-body-text);
 		font-weight: 600;
 		font-size: var(--font-size-normal);
+		font-family: var(--font-body);
 		white-space: nowrap;
-		color: var(--color-body-text);
-		margin: var(--spacing-24) calc(var(--spacing-24) * -1) var(--spacing-12);
 
 		.label {
-			font-size: var(--font-size-sm);
-			color: var(--grey-500);
 			margin-bottom: var(--spacing-4);
+			color: var(--grey-500);
+			font-size: var(--font-size-sm);
 		}
 
 		.value {
@@ -55,8 +55,8 @@
 		}
 
 		&:disabled {
-			color: var(--grey-200);
 			cursor: not-allowed;
+			color: var(--grey-200);
 
 			& :global(svg) {
 				fill: var(--grey-200);
@@ -65,8 +65,8 @@
 
 		&:active:not(:disabled),
 		&:hover:not(:disabled) {
-			background-color: var(--grey-150);
 			transition: background-color 0.2s;
+			background-color: var(--grey-150);
 		}
 
 		// @media (prefers-color-scheme: dark) {

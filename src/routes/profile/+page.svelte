@@ -186,10 +186,10 @@
 
 <style lang="scss">
 	.activity {
-		margin-top: 36px;
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing-48);
+		margin-top: 36px;
 		margin-bottom: var(--spacing-48);
 
 		.activity-item {
@@ -213,8 +213,8 @@
 	.side-by-side {
 		display: flex;
 		flex-direction: row;
-		align-items: stretch;
 		justify-content: center;
+		align-items: stretch;
 		gap: var(--spacing-6);
 	}
 
@@ -225,10 +225,10 @@
 		margin-top: --var(--spacing-48);
 
 		.pad {
-			padding: var(--spacing-12);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			padding: var(--spacing-12);
 		}
 
 		> div:first-child {
@@ -237,15 +237,15 @@
 		}
 
 		.wallet-info {
-			padding-block: var(--spacing-48);
 			display: flex;
 			flex-direction: column;
 			gap: var(--spacing-12);
+			padding-block: var(--spacing-48);
 		}
 
 		.wallet-info-wrapper {
-			background-color: var(--grey-150);
 			display: block;
+			background-color: var(--grey-150);
 			padding: var(--spacing-12);
 			font-family: var(--font-mono);
 			word-break: break-all;

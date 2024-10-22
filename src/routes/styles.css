@@ -57,9 +57,9 @@ h3:not(:empty),
 .h1:not(:empty),
 .h2:not(:empty),
 .h3:not(:empty) {
-	font-family: var(--font-body);
-	font-weight: var(--font-weight-sb);
 	font-style: normal;
+	font-weight: var(--font-weight-sb);
+	font-family: var(--font-body);
 }
 
 h1:not(:empty),
@@ -98,17 +98,17 @@ html {
 }
 
 body {
+	margin: 0;
+	background-color: var(--color-body-bg);
+	padding: 0;
 	width: 100%;
 	min-height: 100dvh;
 	min-height: 100vh;
 	overflow-x: hidden;
-	margin: 0;
-	padding: 0;
 	color: var(--color-body-text);
-	background-color: var(--color-body-bg);
-	font-family: var(--font-body);
 	font-weight: var(--font-weight-normal);
 	font-size: var(--font-size-normal);
+	font-family: var(--font-body);
 }
 
 *,
@@ -127,8 +127,8 @@ img,
 picture,
 video {
 	display: block;
-	max-width: 100%;
 	border-style: none;
+	max-width: 100%;
 }
 
 a {

@@ -35,22 +35,22 @@
 
 <style lang="scss">
 	form {
-		min-height: calc(100dvh - 92px);
-		min-height: calc(100vh - 92px);
 		display: flex;
-		align-items: stretch;
-		justify-content: center;
 		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
 		gap: var(--spacing-48);
-		max-width: 498px;
 		margin-inline: auto;
 		padding: var(--spacing-24);
+		max-width: 498px;
+		min-height: calc(100dvh - 92px);
+		min-height: calc(100vh - 92px);
 
 		.btns {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 			gap: var(--spacing-12);
 			padding-top: var(--spacing-48);
 		}

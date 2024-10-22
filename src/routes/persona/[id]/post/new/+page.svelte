@@ -202,8 +202,8 @@
 	.side-by-side {
 		display: flex;
 		flex-direction: row;
-		align-items: stretch;
 		justify-content: center;
+		align-items: stretch;
 		gap: var(--spacing-6);
 	}
 
@@ -221,8 +221,8 @@
 	}
 
 	.icon-success {
-		position: relative;
 		display: inline-block;
+		position: relative;
 		margin-bottom: var(--spacing-12);
 
 		:global(svg) {
@@ -236,14 +236,14 @@
 
 		&::before {
 			position: absolute;
-			content: '';
-			inset: -4px auto auto -6px;
-			background-color: var(--color-success);
-			border-radius: 50%;
-			width: 28px;
-			height: 28px;
 			transform: translateX(2px);
 			z-index: -1;
+			inset: -4px auto auto -6px;
+			border-radius: 50%;
+			background-color: var(--color-success);
+			width: 28px;
+			height: 28px;
+			content: '';
 		}
 	}
 </style>

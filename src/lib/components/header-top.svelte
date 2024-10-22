@@ -66,12 +66,12 @@
 	header {
 		position: fixed;
 		top: 0;
-		left: 0;
 		right: 0;
-		background-color: rgba(var(--color-body-bg-rgb), 0.93);
+		left: 0;
+		z-index: 100;
 		backdrop-filter: blur(var(--blur));
 		transition: box-shadow 0.2s;
-		z-index: 100;
+		background-color: rgba(var(--color-body-bg-rgb), 0.93);
 
 		.content {
 			display: flex;
@@ -85,16 +85,16 @@
 		}
 
 		.title {
-			font-family: var(--font-body);
+			font-style: normal;
 			font-weight: 600;
 			font-size: 18px;
-			font-style: normal;
+			font-family: var(--font-body);
 			text-align: left;
 		}
 
 		&.scrolled {
-			box-shadow: 0 1px 5px 0 rgba(var(--color-body-text-rgb), 0.25);
 			transition: box-shadow 0.2s;
+			box-shadow: 0 1px 5px 0 rgba(var(--color-body-text-rgb), 0.25);
 
 			.header-content {
 				transition: padding 0.2s;

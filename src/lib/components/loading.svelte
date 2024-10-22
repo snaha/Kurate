@@ -36,13 +36,13 @@
 <style lang="scss">
 	.loading-screen {
 		display: flex;
-		align-items: stretch;
-		justify-content: center;
 		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
 		gap: var(--spacing-6);
-		max-width: 498px;
 		margin-inline: auto;
 		padding: var(--spacing-24);
+		max-width: 498px;
 		text-align: center;
 
 		&.full-page {
@@ -59,27 +59,27 @@
 
 		.loading {
 			display: flex;
-			gap: var(--spacing-6);
 			justify-content: center;
 			align-items: center;
-			height: 32px;
+			gap: var(--spacing-6);
 			margin-bottom: var(--spacing-12);
+			height: 32px;
 
 			@keyframes loading-circle {
 				0% {
+					background-color: var(--color-body-text);
 					width: var(--spacing-6);
 					height: var(--spacing-6);
-					background-color: var(--color-body-text);
 				}
 				50% {
+					background-color: transparent;
 					width: var(--spacing-3);
 					height: var(--spacing-3);
-					background-color: transparent;
 				}
 				100% {
+					background-color: var(--color-body-text);
 					width: var(--spacing-6);
 					height: var(--spacing-6);
-					background-color: var(--color-body-text);
 				}
 			}
 
@@ -89,13 +89,13 @@
 
 				&::before {
 					position: absolute;
-					inset: 50%;
 					transform: translate(-50%, -50%);
-					content: '';
-					border-radius: 50%;
 					animation-duration: 2.1s;
-					animation-name: loading-circle;
 					animation-iteration-count: infinite;
+					animation-name: loading-circle;
+					inset: 50%;
+					border-radius: 50%;
+					content: '';
 				}
 
 				&:nth-child(2)::before {
@@ -109,17 +109,17 @@
 		}
 
 		.title {
-			font-size: var(--font-size-lg);
 			font-weight: var(--font-weight-sb);
+			font-size: var(--font-size-lg);
 		}
 
 		.btns {
-			margin-top: var(--spacing-48);
 			display: flex;
 			flex-direction: row;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 			gap: var(--spacing-12);
+			margin-top: var(--spacing-48);
 		}
 
 		:global(.small) {

@@ -2,15 +2,6 @@ import { browser } from '$app/environment'
 
 type JSONdecoded = string | number | boolean | object | Array<JSONdecoded>
 
-/**
- * Sleep for N miliseconds
- *
- * @param ms Number of miliseconds to sleep
- */
-export async function sleep(ms: number): Promise<void> {
-	return new Promise<void>((resolve) => setTimeout(() => resolve(), ms))
-}
-
 export async function saveToLocalStorage<T extends JSONdecoded>(key: string, data: T) {
 	if (browser && localStorage) {
 		localStorage.setItem(key, JSON.stringify(data))

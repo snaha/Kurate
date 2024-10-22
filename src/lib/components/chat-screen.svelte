@@ -227,8 +227,8 @@
 		}
 		.btn {
 			display: flex;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 		}
 	}
 
@@ -241,26 +241,26 @@
 
 		.message {
 			display: flex;
-			gap: var(--spacing-6);
 			flex-direction: column;
 			align-items: flex-end;
+			gap: var(--spacing-6);
 			margin-bottom: var(--spacing-24);
 
 			.message-content {
 				display: flex;
 				flex-direction: row;
-				gap: var(--spacing-6);
 				align-items: flex-end;
+				gap: var(--spacing-6);
 			}
 
 			.message-text {
+				display: inline-block;
 				border: 1px solid var(--grey-200);
-				padding: var(--spacing-12);
 				border-radius: var(--spacing-24);
 				border-bottom-right-radius: 0;
-				display: inline-block;
-				font-family: var(--font-serif);
+				padding: var(--spacing-12);
 				font-size: var(--font-size-lg);
+				font-family: var(--font-serif);
 			}
 
 			.timestamp {
@@ -271,15 +271,15 @@
 				align-items: flex-start;
 
 				.message-text {
-					border-bottom-left-radius: 0;
 					border-bottom-right-radius: var(--spacing-24);
+					border-bottom-left-radius: 0;
 					background-color: var(--grey-200);
 				}
 			}
 
 			&.system {
-				text-align: right;
 				margin-bottom: var(--spacing-48);
+				text-align: right;
 				> div:first-child {
 					color: var(--grey-300);
 				}
@@ -289,13 +289,13 @@
 
 	.chat-input-wrapper {
 		position: fixed;
+		transition: background-color 0.2s;
 		inset: auto 0 0 0;
 		background-color: var(--color-body-bg);
-		transition: background-color 0.2s;
 
 		&:focus-within {
-			background-color: var(--grey-150);
 			transition: background-color 0.2s;
+			background-color: var(--grey-150);
 		}
 
 		.chat-input {
@@ -311,9 +311,9 @@
 			}
 			.chat-buttons {
 				display: flex;
+				flex-grow: 0;
 				justify-content: flex-end;
 				gap: var(--spacing-12);
-				flex-grow: 0;
 			}
 		}
 	}

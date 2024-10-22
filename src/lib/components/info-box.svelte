@@ -16,21 +16,21 @@
 
 <style lang="scss">
 	.info-box {
-		padding-bottom: var(--spacing-24);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: flex-start;
+		align-items: center;
 		gap: var(--spacing-48);
+		padding-bottom: var(--spacing-24);
 
 		@media (min-width: 688px) {
 			padding-bottom: var(--spacing-48);
 		}
 		.content {
-			text-align: center;
 			display: flex;
 			flex-direction: column;
 			gap: var(--spacing-6);
+			text-align: center;
 
 			:global(.icon) {
 				margin-bottom: var(--spacing-6);
@@ -39,8 +39,8 @@
 		.buttons:not(:empty) {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 			gap: var(--spacing-12);
 		}
 	}

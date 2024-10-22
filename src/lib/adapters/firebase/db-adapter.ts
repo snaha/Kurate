@@ -31,15 +31,6 @@ export function personaToDB(persona: DraftPersona, participants: string[]): DBPe
 	}
 }
 
-export function postDraftToDB(post: DraftPost, address: string): DBPostPending {
-	return {
-		...post,
-		address,
-		demote: [],
-		promote: [],
-	}
-}
-
 export function postPendingFromDB(
 	post: DBPostPending,
 	postId: string,

@@ -37,7 +37,7 @@
 							MAX_DIMENSIONS.PERSONA_PICTURE.width,
 							MAX_DIMENSIONS.PERSONA_PICTURE.height,
 						),
-				  )
+					)
 				: picture
 		} catch (error) {
 			console.error(error)
@@ -53,7 +53,7 @@
 							MAX_DIMENSIONS.PERSONA_COVER.width,
 							MAX_DIMENSIONS.PERSONA_COVER.height,
 						),
-				  )
+					)
 				: cover
 		} catch (error) {
 			console.error(error)
@@ -136,11 +136,11 @@
 <style lang="scss">
 	.top {
 		position: absolute;
-		aspect-ratio: 16/9;
-		max-height: 342px;
-		width: 100vw;
-		background-color: #666666;
 		z-index: -1;
+		background-color: #666666;
+		aspect-ratio: 16/9;
+		width: 100vw;
+		max-height: 342px;
 		overflow: hidden;
 
 		@media (min-width: 608px) {
@@ -149,11 +149,11 @@
 		}
 
 		.img {
-			position: absolute;
-			inset: 0 0 0 0;
 			display: flex;
+			position: absolute;
 			justify-content: center;
 			align-items: center;
+			inset: 0 0 0 0;
 
 			img {
 				width: 100%;
@@ -166,30 +166,30 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: var(--spacing-24);
 		transition: padding 0.2s;
+		padding: var(--spacing-24);
 
 		@media (min-width: 688px) {
-			padding: var(--spacing-48);
 			transition: padding 0.2s;
+			padding: var(--spacing-48);
 		}
 	}
 
 	.avatar {
-		width: 100vw;
 		position: relative;
 		margin-bottom: var(--spacing-12);
+		width: 100vw;
 
 		.no-img,
 		.img {
-			aspect-ratio: 1;
-			height: calc(calc(100vw / 1.777) - 68px);
 			display: flex;
+			position: relative;
 			justify-content: center;
 			align-items: center;
-			background-color: #c9c9c9;
 			margin-inline: auto;
-			position: relative;
+			background-color: #c9c9c9;
+			aspect-ratio: 1;
+			height: calc(calc(100vw / 1.777) - 68px);
 
 			@media (min-width: 608px) {
 				height: 274px;
@@ -206,15 +206,15 @@
 
 		.empty,
 		.change {
-			position: absolute;
-			inset: auto var(--spacing-12) var(--spacing-12) auto;
-			transform: none;
-			width: max-content;
-			height: fit-content;
 			display: flex;
+			position: absolute;
 			justify-content: center;
 			align-items: center;
+			transform: none;
 			z-index: 10;
+			inset: auto var(--spacing-12) var(--spacing-12) auto;
+			width: max-content;
+			height: fit-content;
 		}
 
 		.profile-default {
@@ -235,15 +235,15 @@
 	}
 
 	.persona-info {
-		text-align: center;
-		max-width: 738px;
 		margin-inline: auto;
+		max-width: 738px;
+		text-align: center;
 		.name,
 		.pitch,
 		.description {
 			margin-bottom: var(--spacing-12);
-			max-width: 498px;
 			margin-inline: auto;
+			max-width: 498px;
 		}
 
 		.description {
@@ -252,43 +252,43 @@
 	}
 
 	.post-count {
-		font-size: 12px;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		justify-content: center;
 		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
 		gap: var(--spacing-12);
+		font-size: 12px;
 
 		> div {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
-			justify-content: flex-start;
 			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-items: center;
 			gap: var(--spacing-3);
 		}
 
 		.rep {
-			background-color: var(--grey-200);
 			border-radius: 9px;
-			font-size: var(--font-size-sm);
-			font-weight: var(--font-weight-sb);
-			padding-left: var(--spacing-6);
-			padding-right: var(--spacing-4);
+			background-color: var(--grey-200);
 			padding-top: 1px;
+			padding-right: var(--spacing-4);
+			padding-left: var(--spacing-6);
+			font-weight: var(--font-weight-sb);
+			font-size: var(--font-size-sm);
 		}
 	}
 
 	.buttons-bottom {
-		position: relative;
-		padding: var(--spacing-24);
 		display: flex;
+		position: relative;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: var(--spacing-12);
-		flex-wrap: wrap;
+		padding: var(--spacing-24);
 
 		@media (min-width: 688px) {
 			padding: var(--spacing-48);

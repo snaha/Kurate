@@ -104,13 +104,13 @@
 
 <style lang="scss">
 	.fullscreen-image {
-		position: fixed;
-		inset: 0;
-		z-index: 1000;
-		background-color: var(--color-black);
 		display: flex;
+		position: fixed;
 		justify-content: center;
 		align-items: center;
+		z-index: 1000;
+		inset: 0;
+		background-color: var(--color-black);
 	}
 	.button-close {
 		position: fixed;
@@ -126,8 +126,8 @@
 	.button-next {
 		position: fixed;
 		top: 50%;
-		transform: translateY(-50%);
 		right: var(--spacing-24);
+		transform: translateY(-50%);
 		z-index: 1005;
 
 		@media (min-width: 668px) {
@@ -137,8 +137,8 @@
 	.button-previous {
 		position: fixed;
 		top: 50%;
-		transform: translateY(-50%);
 		left: var(--spacing-24);
+		transform: translateY(-50%);
 		z-index: 1005;
 
 		@media (min-width: 668px) {
@@ -148,21 +148,21 @@
 	.btns {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		justify-content: flex-start;
+		align-items: center;
 		gap: var(--spacing-12);
 	}
 
 	.more {
 		position: absolute;
-		background-color: rgba(var(--color-black-rgb), 0.5);
-		color: var(--color-body-bg);
+		transform: translate(50%, -50%);
+		inset: 50% 50% auto auto;
 		border-radius: var(--spacing-24);
+		background-color: rgba(var(--color-black-rgb), 0.5);
 		padding: var(--spacing-12);
 		min-width: 44px;
+		color: var(--color-body-bg);
 		text-align: center;
-		inset: 50% 50% auto auto;
-		transform: translate(50%, -50%);
 	}
 
 	/* The magic */
@@ -238,8 +238,8 @@
 	}
 
 	.child {
-		flex-basis: 100%;
 		position: relative;
+		flex-basis: 100%;
 
 		img {
 			max-height: 300px;
@@ -248,9 +248,9 @@
 
 		&:not(:only-child) img {
 			aspect-ratio: 1;
-			object-fit: cover;
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
 		}
 	}
 
@@ -269,8 +269,8 @@
 	}
 
 	.post-content {
-		font-family: var(--font-serif);
 		line-height: 1.38;
+		font-family: var(--font-serif);
 	}
 
 	:global(.detail) {

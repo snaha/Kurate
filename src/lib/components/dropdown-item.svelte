@@ -22,16 +22,16 @@
 
 <style lang="scss">
 	li {
-		padding: var(--spacing-12);
-		list-style: none;
-		cursor: pointer;
-		position: relative;
 		display: flex;
+		position: relative;
 		justify-content: space-between;
 		align-items: center;
 		gap: var(--spacing-24);
-		font-family: var(--font-serif);
+		cursor: pointer;
+		padding: var(--spacing-12);
 		font-size: var(--font-size-lg);
+		font-family: var(--font-serif);
+		list-style: none;
 
 		&.danger {
 			color: var(--color-red);
@@ -42,8 +42,8 @@
 		}
 
 		&.disabled {
-			color: var(--grey-200);
 			cursor: not-allowed;
+			color: var(--grey-200);
 		}
 
 		&:not(:last-child) {

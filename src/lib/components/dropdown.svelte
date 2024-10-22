@@ -53,13 +53,13 @@
 
 		ul {
 			position: absolute;
-			inset: 100% 0 auto auto;
-			min-width: min(calc(100vw - 48px), 250px);
-			max-width: max(calc(100vw - 48px), 450px);
 			z-index: 10;
 			backdrop-filter: blur(3px);
+			inset: 100% 0 auto auto;
 			box-shadow: 0 1px 5px 0 rgba(var(--color-body-text-rgb), 0.25);
 			background-color: rgba(var(--color-body-bg-rgb), 0.93);
+			min-width: min(calc(100vw - 48px), 250px);
+			max-width: max(calc(100vw - 48px), 450px);
 			overflow: hidden;
 
 			&.rep {

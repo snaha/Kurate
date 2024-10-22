@@ -15,16 +15,16 @@
 	}
 
 	.bar-bg {
-		background-color: #ececec;
-		height: 100%;
 		flex-grow: 1;
 		border-radius: 6px;
+		background-color: #ececec;
+		height: 100%;
 	}
 
 	.bar-progress {
+		transition: width 0.5s ease;
+		border-radius: 6px;
 		background-color: #181818;
 		height: 100%;
-		border-radius: 6px;
-		transition: width 0.5s ease;
 	}
 </style>

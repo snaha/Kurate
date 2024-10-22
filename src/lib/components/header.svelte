@@ -62,20 +62,22 @@
 	header.root {
 		position: fixed;
 		top: 0;
-		left: 0;
 		right: 0;
+		left: 0;
+		z-index: 100;
+		backdrop-filter: blur(var(--blur));
+		transition:
+			box-shadow 0.2s,
+			padding 0.2s;
 		inset: 0 0 auto;
 		background-color: rgba(var(--color-body-bg-rgb), 0.93);
-		backdrop-filter: blur(var(--blur));
-		z-index: 100;
 		padding-inline: var(--spacing-24);
 		padding-block: var(--spacing-24);
-		transition: box-shadow 0.2s, padding 0.2s;
 
 		@media (min-width: 688px) {
-			padding-block: var(--spacing-48);
-			padding-inline: var(--spacing-48);
 			transition: padding 0.2s;
+			padding-inline: var(--spacing-48);
+			padding-block: var(--spacing-48);
 		}
 
 		.content {
@@ -99,20 +101,20 @@
 
 			.btns:not(:empty) {
 				display: flex;
+				flex-direction: row;
 				justify-content: flex-end;
 				align-items: center;
-				flex-direction: row;
 				gap: var(--spacing-12);
 			}
 		}
 
 		.title {
-			font-family: var(--font-body);
+			font-style: normal;
 			font-weight: 600;
 			font-size: 18px;
-			font-style: normal;
-			text-align: center;
 			line-height: 245%;
+			font-family: var(--font-body);
+			text-align: center;
 		}
 
 		// Hide header when not scrolled
@@ -121,9 +123,11 @@
 		}
 
 		&.scrolled {
-			transition: box-shadow 0.2s, padding 0.2s;
-			box-shadow: 0 1px 5px 0 rgba(var(--color-body-text-rgb), 0.25);
 			display: initial;
+			transition:
+				box-shadow 0.2s,
+				padding 0.2s;
+			box-shadow: 0 1px 5px 0 rgba(var(--color-body-text-rgb), 0.25);
 
 			// @media (prefers-color-scheme: dark) {
 			// 	box-shadow: 0 1px 5px 0 rgba(var(--color-body-bg-rgb), 0.75);

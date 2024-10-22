@@ -31,10 +31,10 @@
 
 <style lang="scss">
 	.box {
+		flex-basis: 100%;
+		margin-top: var(--spacing-6);
 		border: 1px solid var(--grey-200);
 		padding: var(--spacing-24);
-		margin-top: var(--spacing-6);
-		flex-basis: 100%;
 		text-align: center;
 
 		&.gap {
@@ -55,15 +55,15 @@
 		}
 
 		.token-amt {
+			font-weight: var(--font-weight-sb);
 			font-size: 40px;
 			line-height: 1;
-			font-weight: var(--font-weight-sb);
 		}
 
 		.token {
-			text-transform: uppercase;
-			font-weight: var(--font-weight-sb);
 			margin-bottom: var(--spacing-12);
+			font-weight: var(--font-weight-sb);
+			text-transform: uppercase;
 		}
 
 		&.error {

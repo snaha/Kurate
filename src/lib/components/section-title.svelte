@@ -24,18 +24,18 @@
 
 <style lang="scss">
 	.wrapper {
-		padding-block: var(--spacing-24);
 		transition: padding 0.2s;
-		max-width: 498px;
 		margin-inline: auto;
+		padding-block: var(--spacing-24);
+		max-width: 498px;
 
 		&.pad {
 			padding-inline: var(--spacing-24);
 		}
 
 		@media (min-width: 688px) {
-			max-width: 996px;
 			padding-bottom: var(--spacing-12);
+			max-width: 996px;
 
 			&.pad {
 				padding-inline: var(--spacing-48);
@@ -56,19 +56,19 @@
 
 		.row {
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
 			flex-direction: row;
 			flex-wrap: wrap;
-			margin-bottom: var(--spacing-12);
+			justify-content: space-between;
+			align-items: center;
 			gap: var(--spacing-12);
+			margin-bottom: var(--spacing-12);
 
 			.title {
-				font-size: var(--font-size-lg);
-				font-weight: var(--font-weight-sb);
 				transition: padding 0.2s;
-				max-width: 498px;
 				border-bottom: none;
+				max-width: 498px;
+				font-weight: var(--font-weight-sb);
+				font-size: var(--font-size-lg);
 			}
 
 			@media (min-width: 688px) {
@@ -77,10 +77,10 @@
 
 			.buttons {
 				display: flex;
-				justify-content: space-between;
-				align-items: center;
 				flex-direction: row;
 				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
 				gap: var(--spacing-12);
 			}
 		}
