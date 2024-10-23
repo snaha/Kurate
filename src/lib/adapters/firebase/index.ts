@@ -38,25 +38,32 @@ import {
 	postFromDB,
 	postPendingFromDB,
 } from './db-adapter'
+import {
+	PUBLIC_FIREBASE_API_KEY,
+	PUBLIC_FIREBASE_AUTH_DOMAIN,
+	PUBLIC_FIREBASE_PROJECT_ID,
+	PUBLIC_FIREBASE_STORAGE_BUCKET,
+	PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+	PUBLIC_FIREBASE_APP_ID,
+	PUBLIC_IPFS_AUTH,
+	PUBLIC_IPFS_GATEWAY,
+	PUBLIC_IPFS_HOST,
+} from '$env/static/public'
 
-// FIXME: no idea where whe should put these so that they don't leak. I can limit to some specific origin I guess
-const IPFS_AUTH =
-	'Basic Mk5Nbk1vZUNSTWMyOTlCQjYzWm9QZzlQYTU3OjAwZTk2MmJjZTBkZmQxZWQxNGNhNmY1M2JiYjYxMTli'
-const IPFS_GATEWAY = 'https://kurate.infura-ipfs.io/ipfs'
+const IPFS_AUTH = PUBLIC_IPFS_AUTH
+const IPFS_GATEWAY = PUBLIC_IPFS_GATEWAY
+const IPFS_HOST = PUBLIC_IPFS_HOST
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: 'AIzaSyBqjyMLRZJWnY9mOYB4m8jXLvqpC77xo58',
-	authDomain: 'kurate-demo-8706f.firebaseapp.com',
-	projectId: 'kurate-demo-8706f',
-	storageBucket: 'kurate-demo-8706f.appspot.com',
-	messagingSenderId: '471680773871',
-	appId: '1:471680773871:web:7139a8f64ddfe2b4bff51a',
+	apiKey: PUBLIC_FIREBASE_API_KEY,
+	authDomain: PUBLIC_FIREBASE_AUTH_DOMAIN,
+	projectId: PUBLIC_FIREBASE_PROJECT_ID,
+	storageBucket: PUBLIC_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+	appId: PUBLIC_FIREBASE_APP_ID,
 }
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig)
-// Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app)
 
 function epochCounter(): () => unknown {
@@ -75,7 +82,7 @@ function epochCounter(): () => unknown {
 
 export class Firebase implements Adapter {
 	private ipfs = create({
-		host: 'ipfs.infura.io',
+		host: IPFS_HOST,
 		port: 5001,
 		protocol: 'https',
 		headers: {
